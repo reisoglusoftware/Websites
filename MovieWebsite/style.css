@@ -130,6 +130,7 @@ a:hover {
   cursor: pointer;
   position: absolute;
   right: 1px;
+  transition: 0.5s all ease;
 }
 /* ! Navbar End */
 
@@ -188,7 +189,8 @@ a:hover {
 
 .featured-buttons {
   display: flex;
-  column-gap: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .featured-buttons button {
@@ -243,9 +245,11 @@ a:hover {
 .movie-list {
   display: flex;
   align-items: center;
-  column-gap: 20px;
+  column-gap: 30px;
   list-style: none;
   padding-bottom: 20px;
+  transform: translateX(0);
+  transition: all 1s ease 0s;
 }
 
 .movie-item {
@@ -254,6 +258,7 @@ a:hover {
 
 .movie-list-wrapper {
   overflow: hidden;
+  position: relative;
 }
 
 .movie-item:hover .movie-item-title,
@@ -278,8 +283,8 @@ a:hover {
 }
 
 .movie-item-image {
-  width: 20vw;
-  height: 20vh;
+  width: 270px;
+  height: 200px;
   margin-top: 20px;
   border-radius: 10px;
   border-width: 3px;
@@ -321,4 +326,110 @@ a:hover {
   opacity: 1;
 }
 
+.arrow-right {
+  width: 100px;
+  display: flex;
+  font-size: 120px;
+  position: absolute;
+  right: 0px;
+  top: 50px;
+  opacity: 0.5;
+  transition: 0.5s all ease-in-out;
+  cursor: pointer;
+}
+
+.arrow-right:hover {
+  opacity: 1;
+}
+
+.arrow-left {
+  width: 100px;
+  display: flex;
+  font-size: 120px;
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  opacity: 0.5;
+  transition: 0.5s all ease-in-out;
+  cursor: pointer;
+}
+
+.arrow-left:hover {
+  opacity: 1;
+}
 /* ! Movie List End */
+
+/* ! Dark MOde Start */
+
+.container.active {
+  background-color: white;
+}
+
+.navbar.active {
+  background-color: white;
+}
+
+.navbar a.active {
+  color: black;
+  font-weight: bold;
+}
+
+.navbar span.active,
+.navbar .bi-caret-down.active {
+  color: black;
+  font-weight: bold;
+}
+
+.sidebar.active {
+  background-color: white;
+}
+
+.sidebar i.active {
+  color: black;
+}
+
+.toggle.active {
+  background-color: black;
+}
+
+.toggle-ball.active {
+  background-color: white;
+  transform: translateX(-20px);
+}
+
+.movie-list-filter select.active {
+  background-color: white;
+  color: black;
+}
+
+.movie-list-title.active {
+  color: black;
+}
+
+/* ! Dark MOde End */
+
+/*  ! Responsive Start */
+@media only screen and (max-width: 900px) {
+  .menu-container {
+    display: none;
+  }
+
+  .featured-content {
+    height: 50vh;
+  }
+
+  .featured-title {
+    width: 200px;
+  }
+
+  .featured-desc {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    max-width: 200px;
+    padding: 0px;
+  }
+}
+
+/*  ! Responsive End */
