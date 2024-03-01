@@ -380,3 +380,46 @@ html::-webkit-scrollbar-track {
   line-height: 1.4;
 }
 /* ! ABOUT END */
+
+/* ! REVIEW START */
+.review .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.review .box-container .box {
+  border: var(--border);
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: white;
+  border-radius: 3rem;
+}
+
+.review .box-container .box p {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  padding: 2rem 0;
+}
+
+.review .box-container .box .user {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.review .box-container .box h3 {
+  font-size: 1.6rem;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.review .box-container .box .stars {
+  font-size: 1.5rem;
+  color: goldenrod;
+}
+
+/* ! REVIEW END */
