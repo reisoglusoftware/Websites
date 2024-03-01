@@ -45,17 +45,15 @@ a {
 /* ! BUTTON */
 .btn {
   display: inline-block;
-
   margin-top: 1rem;
   padding: 2rem 3.75rem;
-
   background-color: var(--black-color);
   color: white;
-
   font-size: 1.8rem;
   font-weight: bold;
   opacity: 1;
   border-radius: 4rem;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -423,3 +421,93 @@ html::-webkit-scrollbar-track {
 }
 
 /* ! REVIEW END */
+
+/* ! CONTACT START */
+
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--black-color);
+  /* border-radius: 2rem; */
+  gap: 1rem;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+  /* border-radius: 2rem 0 0 2rem; */
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  width: 100%;
+  object-fit: cover;
+  text-align: center;
+}
+
+.contact .row form h3 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 400;
+  padding-bottom: 2rem;
+}
+
+.contact .row form .inputBox {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0rem;
+  border: var(--border);
+}
+
+.contact .row form .inputBox i {
+  font-size: 2rem;
+  color: white;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.contact .row form .inputBox input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.8rem;
+  color: white;
+  text-transform: none;
+  background: none;
+}
+
+.contact .row form .btn {
+  color: var(--main-color);
+  background-color: white;
+  font-weight: bold;
+}
+
+/* ! CONTACT END */
+
+/* ! BLOG START */
+
+.blog .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.blog .box-container .box img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.blog .box-container .box {
+  padding: 3rem;
+  background-color: white;
+  border-radius: 3rem;
+  min-height: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ! BLOG END */
