@@ -465,7 +465,7 @@ html::-webkit-scrollbar-track {
 .contact .row form .inputBox i {
   font-size: 2rem;
   color: white;
-  padding-left: 0.5rem;
+  padding-left: 2rem;
   padding-right: 0.5rem;
 }
 
@@ -494,20 +494,61 @@ html::-webkit-scrollbar-track {
   gap: 1.5rem;
 }
 
-.blog .box-container .box img {
+.blog .box-container .box {
+  background-color: white;
+  border-radius: 3rem;
+}
+
+.blog .box-container .box .image {
+  height: 25rem;
+  overflow: hidden;
+  width: 100%;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+}
+
+.blog .box-container .box .image img {
+  height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.blog .box-container .box {
-  padding: 3rem;
-  background-color: white;
-  border-radius: 3rem;
-  min-height: 60rem;
+.blog .box-container .box:hover .image img {
+  transform: scale(1.2);
+}
+
+.blog .box-container .box .content {
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+}
+
+.blog .box-container .box .content .title {
+  line-height: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 0.4rem;
+}
+
+.blog .box-container .box .content span {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.blog .box-container .box .content p {
+  padding: 2rem 0rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  text-align: justify;
+  color: #746969;
+}
+
+.blog .box-container .box .content .btn {
+  padding-left: 7rem;
+  padding-right: 7rem;
 }
 
 /* ! BLOG END */
