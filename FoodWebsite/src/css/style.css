@@ -753,7 +753,7 @@ html::-webkit-scrollbar-track {
 }
 
 @media (max-width: 768px) {
-  #menu-btn {
+  .header #menu-btn {
     display: inline-block;
   }
 
@@ -780,4 +780,13 @@ html::-webkit-scrollbar-track {
   }
 }
 
+@media (max-width: 576px) {
+  html {
+    font-size: 50%;
+  }
+
+  .header #menu-btn {
+    display: inline-block;
+  }
+}
 /* ! RESPONSIVE END */
