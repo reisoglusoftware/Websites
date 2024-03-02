@@ -61,9 +61,47 @@ a {
   opacity: 0.8;
 }
 
+.search-input {
+  font-size: 1.6rem;
+  color: var(--black-color);
+  padding: 1rem;
+  text-transform: none;
+  border-radius: 3rem;
+}
+
 /* ! HEADER START */
 
 /* ! HEADING */
+
+.header .search-form {
+  position: absolute;
+  top: 115%;
+  right: 7%;
+  background-color: white;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 3rem;
+  box-shadow: 0rem 0rem 2.5rem 2rem rgb(0, 0, 0, 0.75);
+  transform: scaleY(0);
+}
+
+.header .search-form.active {
+  transform: scaleY(1);
+}
+
+.header .search-form i {
+  cursor: pointer;
+  font-size: 2.1rem;
+  margin-right: 1.5rem;
+  color: var(--black-color);
+}
+
+.header .search-form input {
+  width: 100%;
+}
+
 .heading {
   color: white;
   font-size: 4rem;
@@ -128,6 +166,63 @@ a {
   font-size: 2.5rem;
   margin-left: 2rem;
   background-color: transparent;
+}
+
+.header #menu-btn {
+  display: none;
+}
+
+.header .card-items-container {
+  position: absolute;
+  top: 95%;
+  height: calc(100vh - 9rem);
+  width: 35rem;
+  background-color: white;
+  box-shadow: 0rem 2rem 1.4rem 0rem rgba(0, 0, 0, 0.75);
+  right: -100%;
+}
+
+.header .card-items-container.active {
+  right: 3rem;
+}
+
+.header .card-items-container .card-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.header .card-items-container .card-item:hover {
+  box-shadow: 0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.75);
+}
+
+.header .card-items-container .card-item .fa-times {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--black-color);
+}
+
+.header .card-items-container .card-item img {
+  height: 7rem;
+}
+
+.header .card-items-container .card-item .content h3 {
+  font-size: 1.8rem;
+}
+
+.header .card-items-container .card-item .content .price {
+  font-size: 1.4rem;
+}
+
+.header .card-items-container a {
+  width: 100%;
+  text-align: center;
+  border-radius: 0rem;
 }
 
 /* ! HEADER END */
@@ -552,3 +647,137 @@ html::-webkit-scrollbar-track {
 }
 
 /* ! BLOG END */
+
+/* ! FOOTER START */
+.footer {
+  background-color: var(--black-color);
+  text-align: center;
+}
+
+.footer .search {
+  display: flex;
+  justify-content: center;
+}
+
+.footer .search .search-input {
+  width: 30rem;
+}
+
+.footer .search .btn {
+  background-color: var(--main-color);
+  padding: 1rem 2rem;
+  margin-left: 2rem;
+}
+
+.footer .share {
+  padding: 2rem 0rem;
+}
+
+.footer .share a {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  color: white;
+  font-size: 2rem;
+  border: var(--border);
+  border-radius: 50%;
+  margin: 0.2rem;
+}
+
+.footer .share a:hover {
+  background-color: var(--main-color);
+}
+
+.footer .links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer .links a {
+  color: white;
+  font-size: 1.4rem;
+  background-color: var(--main-color);
+  padding: 1rem 2.5rem;
+  border: 0.1rem solid #ccc;
+  opacity: 1;
+}
+
+.footer .links a:hover {
+  background-color: var(--black-color);
+}
+
+.footer .links a.active {
+  background-color: var(--black-color);
+}
+
+.footer .credit {
+  padding-top: 2rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: white;
+}
+
+.footer .credit span {
+  color: var(--main-color);
+}
+
+.footer .credit span:hover {
+  color: rgb(231, 128, 59);
+}
+
+/* ! FOOTER END */
+
+/* ! RESPONSIVE START */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  .header .logo img {
+    height: 7rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+
+  .products .box-container .box .box-head .name {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .header .navigation-bar {
+    position: absolute;
+    top: 95%;
+    background-color: white;
+    height: calc(100vh - 9rem);
+    width: 30rem;
+    box-shadow: 0rem 2rem 1.4rem 0rem rgba(0, 0, 0, 0.75);
+    right: -100%;
+  }
+
+  .header .navigation-bar.active {
+    right: 3rem;
+  }
+
+  .header .navigation-bar a {
+    color: var(--black-color);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+}
+
+/* ! RESPONSIVE END */
