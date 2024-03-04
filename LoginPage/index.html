@@ -23,6 +23,10 @@
     </header>
 
     <div class="wrapper">
+      <span class="icon-close">
+        <i class="fa-regular fa-circle-xmark"></i>
+      </span>
+
       <div class="form-box _logIn">
         <h2>Giriş Yap</h2>
 
@@ -56,6 +60,50 @@
           <div class="login-register">
             <p>Bir hesabınız yok mu?</p>
             <a href="#" class="register-link">Kaydol</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-box singUp">
+        <h2>Kaydol</h2>
+
+        <form action="#">
+          <div class="input-box">
+            <span class="icon">
+              <i class="fa-solid fa-user"></i>
+            </span>
+            <input type="text" required />
+            <label>Kullanıcı Adı</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon">
+              <i class="fa-solid fa-envelope"></i>
+            </span>
+            <input type="email" required />
+            <label>E-mail</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon">
+              <i class="fa-solid fa-lock"></i>
+            </span>
+            <input type="password" required />
+            <label>Parola</label>
+          </div>
+
+          <div class="remember-forget">
+            <label>
+              <input type="checkbox" name="checkbox" id="_checkbox" />
+              Gizlilik politikasını & hizmet şartlarını kabul ediyorum.
+            </label>
+          </div>
+
+          <button type="submit" class="btn">Kaydol</button>
+
+          <div class="login-register">
+            <p>Zaten mevcut bir hesabım var</p>
+            <a href="#" class="login-link">Giriş Yap</a>
           </div>
         </form>
       </div>
